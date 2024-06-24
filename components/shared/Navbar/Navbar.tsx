@@ -1,7 +1,18 @@
-import { SignedIn, UserButton } from "@clerk/nextjs";
+// Navbar of the DevOverflow
+
+// Importing Next/React utilities
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+// Importing from Clerk Auth
+import {
+  SignedIn, // Only run the code if they are SignedIn
+  UserButton, // User Profile UI Button
+} from "@clerk/nextjs";
+
+// Importing Components
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
@@ -19,7 +30,7 @@ const Navbar = () => {
       </Link>
       Global Search
       <div className="flex-between gap-5">
-        Theme
+        <Theme />
         <SignedIn>
           <UserButton
             afterSignOutUrl="/"
@@ -33,6 +44,7 @@ const Navbar = () => {
             }}
           ></UserButton>
         </SignedIn>
+        MobileNav
       </div>
     </nav>
   );

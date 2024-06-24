@@ -1,3 +1,5 @@
+// Theme Context Provider for the Whole App
+
 "use client";
 
 // Context and React Hooks can only be used within Client Components.
@@ -18,12 +20,16 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Handling Dark and Light mode Theme change.
   const handleThemeChange = () => {
-    if (mode === "dark") {
-      setMode("light");
-      document.documentElement.classList.add("light");
-    } else {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       setMode("dark");
       document.documentElement.classList.add("dark");
+    } else {
+      setMode("light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
