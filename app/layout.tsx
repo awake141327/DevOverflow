@@ -1,22 +1,28 @@
+// Authentication Provider (Clerk)
 import { ClerkProvider } from "@clerk/nextjs";
 
+// Global CSS & Fonts
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
+// Metadata Type
 import type { Metadata } from "next";
 
+// Initialising Inter Font
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-inter",
 });
 
+// Initialising Space Grotesk Font
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-spaceGrotesk",
 });
 
+// Initialising Metadata with Title, Description & Icon.
 export const metadata: Metadata = {
   title: "DevOverflow",
   description:
@@ -26,6 +32,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Stating the Root Layout ('/')
 export default function RootLayout({
   children,
 }: {
