@@ -1,3 +1,5 @@
+// path = '/ask-question'
+
 import React from "react";
 
 export default function AskQuestion() {

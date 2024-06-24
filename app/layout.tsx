@@ -1,3 +1,5 @@
+// Main Layout File
+
 // Authentication Provider (Clerk)
 import { ClerkProvider } from "@clerk/nextjs";
 
