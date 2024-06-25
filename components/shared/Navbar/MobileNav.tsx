@@ -25,6 +25,7 @@ import {
 import { sidebarLinks } from "@/constants";
 
 const NavContent = () => {
+  // Getting the Pathname to check the Active Link later on.
   const pathname = usePathname();
 
   return (
@@ -101,15 +102,15 @@ const MobileNav = () => {
             <div className="flex flex-col gap-3 mt-8">
               <SheetClose asChild>
                 <Link href="/sign-in">
-                  <Button className="small-medium font-bold btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
-                    <span className="primary-text-gradient">Sign In</span>
+                  <Button className="small-medium tracking-wider font-bold btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
+                    <span className="primary-text-gradient">Log In</span>
                   </Button>
                 </Link>
               </SheetClose>
 
               <SheetClose asChild>
                 <Link href="/sign-up">
-                  <Button className="small-medium font-bold light-border-2 btn-tertiary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none text-dark400_light900">
+                  <Button className="small-medium tracking-wider font-bold light-border-2 btn-tertiary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none text-dark400_light900">
                     Sign Up
                   </Button>
                 </Link>
