@@ -1,4 +1,4 @@
-// Left SideBar of The Web App
+// Left Sidebar
 
 // Because we are using usePathName hook.
 "use client";
