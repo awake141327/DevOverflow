@@ -6,7 +6,7 @@ import Link from "next/link";
 import React from "react";
 
 // Importing Tag Component
-import RenderTag from "../Tags/RenderTag";
+import RenderTag from "./RenderTag";
 
 // Temp Constants
 const topQuestions = [
