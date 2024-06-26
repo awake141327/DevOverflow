@@ -11,25 +11,25 @@ import RenderTag from "./RenderTag";
 // Temp Constants
 const topQuestions = [
   {
-    _id: 1,
+    _id: '1',
     title:
       "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
   },
-  { _id: 2, title: "Is it only me or the font is bolder than necessary?" },
-  { _id: 3, title: "Redux Toolkit Not Updating State as Expected" },
+  { _id: '2', title: "Is it only me or the font is bolder than necessary?" },
+  { _id: '3', title: "Redux Toolkit Not Updating State as Expected" },
   {
-    _id: 4,
+    _id: '4',
     title: "What is an example of 3 numbers that do not make up a vector?",
   },
-  { _id: 5, title: "Low digit addition generator" },
+  { _id: '5', title: "Low digit addition generator" },
 ];
 
 const popularTags = [
-  { _id: 1, tag: "Next.js", amount: 32 },
-  { _id: 2, tag: "React.js", amount: 69 },
-  { _id: 3, tag: "Test", amount: 44 },
-  { _id: 4, tag: "Node.js", amount: 12 },
-  { _id: 5, tag: "TailwindCSS", amount: 103 },
+  { _id: '1', tag: "Next.js", amount: 32 },
+  { _id: '2', tag: "React.js", amount: 69 },
+  { _id: '3', tag: "Test", amount: 44 },
+  { _id: '4', tag: "Node.js", amount: 12 },
+  { _id: '5', tag: "TailwindCSS", amount: 103 },
 ];
 
 const RightSidebar = () => {

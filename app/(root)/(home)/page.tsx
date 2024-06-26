@@ -7,13 +7,44 @@ import Link from "next/link";
 // Importing ShadCN Button
 import { Button } from "@/components/ui/button";
 
-// Importing LocalSearch, HomeFilters & Select-Filter Component
+// Importing LocalSearch, Tags-HomeFilters, Select-Filter & QuestionCard Component
 import LocalSearch from "@/components/shared/Search/LocalSearch";
-import HomeFilters from "@/components/shared/Home/HomeFilters";
+import HomeFilters from "@/components/Home/HomeFilters";
 import Filter from "@/components/shared/Filter";
+import QuestionCard from "@/components/Cards/QuestionCard";
 
 // Filter Constants
 import { HomePageFilters } from "@/constants/filters";
+import NoResult from "@/components/shared/NoResult";
+
+const questions = [
+  {
+    _id: "1",
+    title: "What are the different techniques to render data in next.js?",
+    tags: [
+      { _id: "1", name: "next.js" },
+      { _id: "2", name: "react.js" },
+    ],
+    author: { _id: "1", name: "John Doe", picture: "john.jpg" },
+    upvotes: 52,
+    views: 1000,
+    answers: [],
+    createdAt: new Date("2024-06-26T12:00:00.000Z"),
+  },
+  {
+    _id: "2",
+    title: "How to center a <div>?",
+    tags: [
+      { _id: "1", name: "css" },
+      { _id: "2", name: "tailwindcss" },
+    ],
+    author: { _id: "2", name: "Amaan Siddiqui", picture: "amaan.jpg" },
+    upvotes: 77,
+    views: 1200,
+    answers: [],
+    createdAt: new Date("2023-12-01T12:00:00.000Z"),
+  },
+];
 
 export default function Home() {
   return (
@@ -42,6 +73,32 @@ export default function Home() {
         />
       </div>
       <HomeFilters />
+      <div className="mt-10 flex w-full flex-col gap-6">
+        {questions.length > 0 ? (
+          questions.map((question) => (
+            <QuestionCard
+              key={question._id}
+              _id={question._id}
+              title={question.title}
+              tags={question.tags}
+              author={question.author}
+              upvotes={question.upvotes}
+              views={question.views}
+              answers={question.answers}
+              createdAt={question.createdAt}
+            />
+          ))
+        ) : (
+          <NoResult
+            title="There's no question to show."
+            description="Be the first to break the silence! 🚀 Ask a Question and kickstart the
+        discussion. our query could be the next big thing others learn from. Get
+        involved! 💡"
+            link="/ask-question"
+            linkTitle="Ask a Question"
+          />
+        )}
+      </div>
     </>
   );
 }
