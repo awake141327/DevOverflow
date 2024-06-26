@@ -1,8 +1,8 @@
 // (root) Folder Layout File (Route Group)
 
 import Navbar from "@/components/shared/Navbar/Navbar";
-import LeftSidebar from "@/components/shared/LeftSidebar/LeftSidebar";
-import RightSidebar from "@/components/shared/RightSidebar/RightSidebar";
+import LeftSidebar from "@/components/shared/LeftSidebar";
+import RightSidebar from "@/components/shared/RightSidebar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
