@@ -1,7 +1,11 @@
+// Metrics Component
+
+// Importing Next/React utils.
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+// Defining Type for Props
 interface Props {
   imgUrl: string;
   alt: string;
@@ -43,6 +47,7 @@ const Metric = ({
     </>
   );
 
+  // If the Metric is Clickable.
   if (href) {
     return (
       <Link href="href" className="flex-center gap-1">
@@ -51,6 +56,7 @@ const Metric = ({
     );
   }
 
+  // If the Metric is Not Clickable.
   return <div className="flex-center flex-wrap gap-1">{metricContent}</div>;
 };
 

@@ -11,6 +11,7 @@ import Metric from "../shared/Metric";
 // Time Stamp utility function.
 import { formatNumber, getTimeStamp } from "@/lib/utils";
 
+// Defining Type for Props
 interface Props {
   _id: string;
   title: string;

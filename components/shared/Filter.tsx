@@ -1,6 +1,7 @@
-"use client";
+// Filter Toggle Component
 
-import React from "react";
+// Interactivity with Filter Select.
+"use client";
 
 // Importing ShadCN Select
 import {

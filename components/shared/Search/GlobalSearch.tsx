@@ -1,6 +1,11 @@
-import { Input } from "@/components/ui/input";
+// Global Search Bar
+
+// Importing React/Next utils.
 import Image from "next/image";
 import React from "react";
+
+// Importing ShadCN Input
+import { Input } from "@/components/ui/input";
 
 const GlobalSearch = () => {
   return (

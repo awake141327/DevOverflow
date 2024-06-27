@@ -1,5 +1,6 @@
 // Local Search Bar
 
+// Interactivity with input element.
 "use client";
 
 // Importing React/Next utils.

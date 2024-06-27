@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-// Get Time Stamp Function
+// Get Time Stamp Function (eg. 2 days ago.)
 export const getTimeStamp = (createdAt: Date) : string => {
   const now = new Date();
   const elapsed = now.getTime() - createdAt.getTime();

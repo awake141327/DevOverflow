@@ -1,8 +1,13 @@
+// Home Filter Tags Component
+
+// Interactivity with Tags.
 "use client";
 
-import { Button } from "@/components/ui/button";
+// Importing Home Page Filters constants.
 import { HomePageFilters } from "@/constants/filters";
-import React from "react";
+
+// Importing ShadCN Button
+import { Button } from "@/components/ui/button";
 
 const HomeFilters = () => {
   const active = "newest";
